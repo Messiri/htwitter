@@ -15,7 +15,10 @@ class ProfilesController < ApplicationController
 		else
 			render 'new'
 		end
+	end
 
+	def show
+		@profile = Profile.find(params[:id])
 	end
 
 	def profile_params
