@@ -12,7 +12,9 @@ class TweetsController < ApplicationController
 		if @tweet.save
 			flash[:success] = "You have created a tweet"
 			redirect_to new_tweet_path
-		end
+		else
+			render 'new'
+		end 
 	end
 
 	def index
